@@ -1,10 +1,8 @@
 package com.bacontech.tenmo.controller;
 
-import com.bacontech.tenmo.dao.UserDao;
 import com.bacontech.tenmo.model.Transfer;
 import com.bacontech.tenmo.model.TransferDto;
 import com.bacontech.tenmo.model.User;
-import com.bacontech.tenmo.services.AccountService;
 import com.bacontech.tenmo.services.TransferService;
 import com.bacontech.tenmo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

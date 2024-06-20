@@ -1,6 +1,5 @@
 package com.bacontech.tenmo.model;
 
-import javax.validation.constraints.DecimalMin;
 import java.math.BigDecimal;
 
 public class Transfer {
