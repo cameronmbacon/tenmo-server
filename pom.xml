@@ -8,8 +8,8 @@
         <version>2.3.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.techelevator</groupId>
-    <artifactId>m02-capstone-server</artifactId>
+    <groupId>com.bacontech</groupId>
+    <artifactId>tenmo-server</artifactId>
     <version>1.0</version>
     <name>tenmo</name>
     <description>TE Bucks Payment System</description>
@@ -19,6 +19,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
         <jjwt.version>0.11.1</jjwt.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <dependencies>
