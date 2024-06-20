@@ -106,7 +106,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.bacontech.TenmoApplication</mainClass>
+                            <mainClass>com.bacontech.tenmo.TenmoApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
