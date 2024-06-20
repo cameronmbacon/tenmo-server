@@ -21,6 +21,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    final static String allowedOrigins = System.getenv("ALLOWED_ORIGINS");
+
     private final TokenProvider tokenProvider;
     private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
     private final JwtAccessDeniedHandler jwtAccessDeniedHandler;
@@ -81,15 +83,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
-
         final Logger logger = LoggerFactory.getLogger(WebMvcConfigurer.class);
-
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 logger.info("Applying CORS configuration");
                 registry.addMapping("/**")
-                        .allowedOrigins(System.getenv("ALLOWED_ORIGINS"))
+                        .allowedOrigins(allowedOrigins.split(","))
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders(System.getenv("ALLOWED_HEADERS"))
                         .allowCredentials(true);
