@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/tenmo-server.jar
+web: java -Dserver.port=$PORT -jar target/tenmo-server-1.0.jar
