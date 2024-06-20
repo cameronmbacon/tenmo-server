@@ -106,12 +106,11 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.YourMainClass</mainClass>
+                            <mainClass>com.bacontech.TenmoApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
